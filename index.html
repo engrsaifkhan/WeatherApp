@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="weatherbody">
+
+
+<h1>Weather Alert</h1>
+<br>
+<form onsubmit="weather(); return false;">
+  <label for="location">Select your location</label>
+<br>
+  <select id="location" name="location">
+    <option value="karachi">Karachi</option>
+    <option value="Islamabad">Islamabad</option>
+    <option value="Lahore">Lahore</option>
+    <option value="Quetta">Quetta</option>
+  </select>
+  <br>
+    <input type="number" id="temp" placeholder="Enter your Area temperature(celcius)" required>
+    <div id="result">
+
+    </div>
+    <button type="submit">enter</button>
+</form>
+
+
+</div>
+<script src="./app.js">
+
+</script>
+  </body>
+</html>
