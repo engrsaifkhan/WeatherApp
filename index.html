@@ -25,14 +25,19 @@
 </div>
 </header>
 <div class="location">
-  <form>
-    <select name="location" required >
+  <form onsubmit="weather(); return false;">
+    <select name="locations" required >
       <option value="Karachi">Karachi</option>
       <option value="Hyderabad">Hyderabad</option>
       <option value="Sukkur">Sukkur</option>
       <option value="Larkana">Larkana</option>
       <option value="Nawabshah">Nawabshah</option>
     </select>
+    <input type="number" id="temp" placeholder="Enter your Area temperature(celcius)" required>
+   <div id="result">
+
+   </div>
+   <button type="submit">enter</button>
   </form>
 
 

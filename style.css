@@ -88,7 +88,7 @@ font-weight: bold;
   margin-top: 10%;
   margin-left: 10%;
   width: 80%;
-  height:10%;
+  height:20%;
   backdrop-filter: blur(10px);
   box-shadow: 1px 1px 5px #F79400;
 }
@@ -99,23 +99,57 @@ font-weight: bold;
 }
 .location>form select{
   width:100%;
-  height:100%;
+  height:50%;
   font-size: 2vw;
   color: black;
   font-family: sans-serif;
   background-color: transparent;
   border: none;
-}
-.glass{
-  width:100%;
-  height:10%;
-  backdrop-filter:blur(10px);
-box-shadow: 1px 1px 5px blue;
-/* border-style: outset; */
-border-color: #0BA5F5;
+  backdrop-filter: blur(10px);
+  box-shadow: 1px 1px 5px #F79400;
+
 }
 
+#temp{
+  width:99.6%;
+  height:50%;
+  font-size: 2vw;
+  color: black;
+  font-family: sans-serif;
+  background-color: transparent;
+  border: none;
+  backdrop-filter: blur(10px);
+  box-shadow: 1px 1px 5px #F79400;
 
+
+}
+#result{
+  margin-top: 2%;
+  width: 70.2%;
+margin-left: 15%;
+  height:50%;
+  font-size: 2.5vw;
+  padding-bottom: 2%;
+text-align: center;
+  color: white;
+  font-family: Brush Script MT;
+  font-weight: bold;
+  border-color: rgb(0,250,250);
+  border-width: 5px;
+  opacity: 0.4;
+  background-color: #00009F;
+}
+button{
+  font-size: 2vw;
+  margin-left: 40%;
+  margin-top: 2%;
+  padding: 1% 5%;
+border: 5px solid rgb(0,250,250);
+background-color: #00009F;
+color: rgb(0,250,250);
+opacity: 0.6;
+  border-radius: 50px;
+}
 #image{
   width:100%;
   height:100%;
