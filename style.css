@@ -2,15 +2,15 @@ html,body{
   margin:0px;
   width: 100%;
   height:100%;
-/* <img id ="image" src="./images/rainy.jpg" alt="Rainweather" /> */
 
 }
 .weatherbody{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
-  background-image: linear-gradient( #0BA5F5,#0001A6);
+  /* background-image: linear-gradient( #0BA5F5,#0001A6); */
+  background-color: #0BA5F5;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,79 +19,103 @@ html,body{
   height:100%;
   margin: 0px;
 }
-h1{
-  font-size: 5vw;
-  font-family: sans-serif;
-  color: rgb(59,84,200);
-  text-shadow: 4px 4px 10px rgb(0, 200,250);
+.logo1>div{
+  width:50px;
+  height:54px;
+  margin-top: 12px;
 }
-form{
+.logo{
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+  width:90%;
+  height:16%;
+  margin-top: 2%;
+  margin-left: 4%;
+}
+.logo1{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width:100%;
+  height: 50%;
+  margin-bottom: 0px;
+}
 
-  width: 80%;
-  height:100%;
-
-}
-label{
-  font-size: 3vw;
-  margin-left: 32%;
-  /* margin-bottom: 10%; */
+.logo1>h1{
   font-family: sans-serif;
-  font-weight: bold;
+  font-stretch: extra-condensed;
+text-shadow: -6px 0px 12px #F79400;
+color: white;
 }
-#location{
+.logo2>h1{
+  font-family: sans-serif;
+  font-stretch: ultra-condensed;
+  text-shadow: -6px 0px 12px #F79400;
+  color:white;
+}
+.logo2{
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+padding: 0px;
+  margin-top: 0px;
   width: 100%;
+  height:50%;
+}
+.logo2>ul{
+  margin-right: 5%;
+  list-style: none;
+
+}
+.logo2>ul li{
+  padding: 4px 10px;
+  box-shadow: 2px 2px 2px #F79400;
+border-radius: 20px;
+
+}
+.logo2>ul li a{
+  text-decoration: none;
+  color:white;
+font-size: 1.5vw;
+font-weight: bold;
+}
+.logo2>h1{
+  margin: 0px;
+}
+.location{
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 80%;
   height:10%;
-  font-size: 2vw;
-  color: white;
-  font-weight: bold;
-  border-color: rgb(0,250,250);
-  border-width: 5px;
-background-color: transparent;
-/* backdrop-filter: blur(1px); */
-  /* background-color: #02D09F; */
-  /* border-color: transparent; */
+  backdrop-filter: blur(10px);
+  box-shadow: 1px 1px 5px #F79400;
 }
 
-#temp{
-  margin-top: 2%;
-  width: 99.2%;
+.location>form{
+  width:100%;
+  height:100%;
+}
+.location>form select{
+  width:100%;
+  height:100%;
+  font-size: 2vw;
+  color: black;
+  font-family: sans-serif;
+  background-color: transparent;
+  border: none;
+}
+.glass{
+  width:100%;
   height:10%;
-  font-size: 2vw;
-  color: white;
-  font-weight: bold;
-  border-color: rgb(0,250,250);
-  border-width: 5px;
-  /* opacity: 0.4; */
-  /* background-color: #00009F; */
-background-color: transparent;
+  backdrop-filter:blur(10px);
+box-shadow: 1px 1px 5px blue;
+/* border-style: outset; */
+border-color: #0BA5F5;
 }
-#result{
-  margin-top: 2%;
-  width: 70.2%;
-margin-left: 15%;
-  height:15%;
-  font-size: 2.5vw;
-  padding-top: 2%;
-text-align: center;
-  color: white;
-  font-family: Brush Script MT;
-  font-weight: bold;
-  border-color: rgb(0,250,250);
-  border-width: 5px;
-  opacity: 0.4;
-  background-color: #00009F;
-}
-button{
-  font-size: 2vw;
-  margin-left: 40%;
-  margin-top: 2%;
-  padding: 2% 5%;
-border: 5px solid rgb(0,250,250);
-background-color: #00009F;
-color: rgb(0,250,250);
-opacity: 0.6;
-  border-radius: 50px;
-}
+
+
 #image{
   width:100%;
   height:100%;
