@@ -1,27 +1,28 @@
-function weather(){
- let temp= +document.querySelector("#temp").value;
- if(temp<0){
- document.querySelector("#result").innerHTML="Very cold, don't go outside";
-document.querySelector(".weatherbody").style.backgroundImage="url('./images/extremeCold.jpg')";
-}
-else if(temp>=0 && temp<10){
-  document.querySelector("#result").innerHTML="Cold breeze outside, wear warm clothes";
-  document.querySelector(".weatherbody").style.backgroundImage="url('./images/snow.jpg')";
-}
-else if(temp>=10 && temp<25){
-  document.querySelector("#result").innerHTML="Cool & pleasant weather";
-  document.querySelector(".weatherbody").style.backgroundImage="url('./images/rainy.jpg')";
-}
-else if(temp>=25 && temp<30){
-  document.querySelector("#result").innerHTML="Go outside and enjoy!";
-  document.querySelector(".weatherbody").style.backgroundImage="url('./images/spring.jpg')";
-}
-else if (temp>=30 && temp<40) {
-document.querySelector("#result").innerHTML="warm weather, be hydrated!";
-document.querySelector(".weatherbody").style.backgroundImage="url('./images/sunny.jpg')";
-}
-else if (temp>=40) {
-  document.querySelector("#result").innerHTML="Very hot , don't go outside";
-  document.querySelector(".weatherbody").style.backgroundImage="url('./images/hotWeather.jpg')";
-}
-}
+
+  function getWeather(){
+let cityName=document.getElementById("cityName").value;
+  axios.get(`https://api.weatherapi.com/v1/current.json?key=c005f17cb7e040d78b3202241221909&q=${cityName}&aqi=no`)
+  .then(function (response) {
+    // handle success
+    let weatherData=response.data;
+    console.log(weatherData);
+    console.log("temp(c):",weatherData.current.temp_c);
+    console.log("Region:",weatherData.location.region);
+document.querySelector(".tempC").innerHTML=` ${weatherData.current.temp_c}<sup>o<sub>C</sub></sup>`;
+
+document.querySelector(".tempF").innerHTML=` ${weatherData.current.temp_f}<sup>o<sub>F</sub></sup>`;
+document.querySelector(".city").innerHTML=` ${weatherData.location.name}`;
+document.querySelector(".date").innerHTML=` ${weatherData.location.localtime}`;
+document.querySelector(".condition").innerHTML=`${weatherData.current.condition.text}`;
+document.querySelector(".humidity").innerHTML=`${weatherData.current.humidity} &nbsp%`;
+document.querySelector(".precipitation").innerHTML=`${weatherData.current.precip_mm}`;
+document.querySelector(".uv").innerHTML=`${weatherData.current.uv}`;
+document.querySelector(".visibility").innerHTML=`${weatherData.current.vis_km}`;
+document.querySelector(".windSpeed").innerHTML=`${weatherData.current.wind_kph}`;
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+
+  }

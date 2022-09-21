@@ -1,50 +1,64 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
   <head>
     <meta charset="utf-8">
-    <title>WEATHER APP</title>
+    <title></title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./style.css">
   </head>
+
   <body>
     <div class="weatherbody">
-<header class="logo">
-<div class="logo1">
+      <div class="weatherHeader">
+        <header class="logo">
+          <div class="logo1">
+            <h1>SK</h1>
+            <div>
+              <img class="logoImage" src="./images/cloudlogo.png" alt="logo">
+            </div>
+          </div>
+          <div class="logo2">
+            <h1>Weather</h1>
+          </div>
+        </header>
+      <div class="location">
+        <form onsubmit="getWeather(); return false">
+          <input type="text" id="cityName" placeholder="City Name" required>
+          <button type="submit">Get Data</button>
+        </form>
+      </div>
+    </div>
+    <div class="result">
+      <div class="leftResult">
+        <h3 class="city"></h3>
+        <p class="date"></p>
+        <p class="condition"></p>
+      </div>
+      <div class="rightResult">
+        <p class="tempC"></p>
+        <p class="tempF"></p>
+      </div>
+    </div>
+    <div class="insight">
+      <div ><p>Humidity</p><br>
+          <div class="humidImg"> <img src="./images/humidity.png" alt="humidity" width="64px" height="64px"> </div><br>
+        <span class="humidity"></span> </div>
+      <div ><p>Precipitation</p><br>
+        <div class="precipImg"> <img src="./images/precipitation.png" alt="precipitation" width="64px" height=64px> </div><br>
+         <span class="precipitation"></span> </div>
+      <div ><p>Ultraviolet index</p><br>
+        <div class="uvImg"> <img src="./images/sun.png" alt="UV Index" width="64px" height=64px> </div><br>
+         <span class="uv"></span> </div>
+      <div><p>Visibility(km)</p><br>
+        <div class="visImg"> <img src="./images/visibility.png" alt="visibility" width="64px" height=64px> </div><br>
+        <span class="visibility"></span> </div>
+      <div><p>Wind (Kph)</p><br>
+        <div class="windImg"> <img src="./images/wind.png" alt="windSpeed" width="64px" height=64px> </div><br>
+        <span class="windSpeed"></span> </div>
+    </div>
+  </div>
 
-
-<h1>SK</h1>
-  <div>
-  <img class="logoImage" src="./images/cloudlogo.png" alt="logo">
-</div>
-</div>
-<div class="logo2">
-  <h1>Weather</h1>
-  <ul>
-    <li> <a href="index.html">Home</a> </li>
-  </ul>
-</div>
-</header>
-<div class="location">
-  <form onsubmit="weather(); return false;">
-    <select name="locations" required >
-      <option value="Karachi">Karachi</option>
-      <option value="Hyderabad">Hyderabad</option>
-      <option value="Sukkur">Sukkur</option>
-      <option value="Larkana">Larkana</option>
-      <option value="Nawabshah">Nawabshah</option>
-    </select>
-    <input type="number" id="temp" placeholder="Enter your Area temperature(celcius)" required>
-   <div id="result">
-
-   </div>
-   <button type="submit">enter</button>
-  </form>
-
-
-
-</div>
-
-</div>
 
 <script src="./app.js">
 
