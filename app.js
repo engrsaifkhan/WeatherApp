@@ -14,11 +14,11 @@ document.querySelector(".tempF").innerHTML=` ${weatherData.current.temp_f}<sup>o
 document.querySelector(".city").innerHTML=` ${weatherData.location.name}`;
 document.querySelector(".date").innerHTML=` ${weatherData.location.localtime}`;
 document.querySelector(".condition").innerHTML=`${weatherData.current.condition.text}`;
-document.querySelector(".humidity").innerHTML=`${weatherData.current.humidity} &nbsp%`;
-document.querySelector(".precipitation").innerHTML=`${weatherData.current.precip_mm}`;
+document.querySelector(".humidity").innerHTML=`${weatherData.current.humidity} &nbsp %`;
+document.querySelector(".precipitation").innerHTML=`${weatherData.current.precip_mm}&nbsp mm`;
 document.querySelector(".uv").innerHTML=`${weatherData.current.uv}`;
-document.querySelector(".visibility").innerHTML=`${weatherData.current.vis_km}`;
-document.querySelector(".windSpeed").innerHTML=`${weatherData.current.wind_kph}`;
+document.querySelector(".visibility").innerHTML=`${weatherData.current.vis_km}&nbsp km`;
+document.querySelector(".windSpeed").innerHTML=`${weatherData.current.wind_kph}&nbsp kph`;
   })
   .catch(function (error) {
     // handle error
