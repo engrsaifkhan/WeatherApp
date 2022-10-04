@@ -1,7 +1,7 @@
 
   function getWeather(){
 let cityName=document.getElementById("cityName").value;
-  axios.get(`https://api.weatherapi.com/v1/current.json?key=c005f17cb7e040d78b3202241221909&q=${cityName}&aqi=no`)
+  axios.get(`https://api.weatherapi.com/v1/current.json?key=a9527d2be22a4661ae680241220410&q=${cityName}&aqi=no`)
   .then(function (response) {
     // handle success
     let weatherData=response.data;
